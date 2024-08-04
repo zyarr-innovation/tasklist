@@ -1,0 +1,17 @@
+/* task.component.css */
+.task-panel.not-started {
+    background-color: #ffcccb; /* Light red */
+  }
+  
+  .task-panel.in-progress {
+    background-color: #ffffcc; /* Light yellow */
+  }
+  
+  .task-panel.completed {
+    background-color: #ccffcc; /* Light green */
+  }
+  
+  .task-panel.discarded {
+    background-color: #cccccc; /* Light gray */
+  }
+  
