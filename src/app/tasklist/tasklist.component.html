@@ -1,0 +1,8 @@
+// tasklist.component.html
+<ng-container *ngTemplateOutlet="renderTasks; context: { $implicit: tasks | async }"></ng-container>
+
+<ng-template #renderTasks let-tasks>
+  <ng-container *ngFor="let task of tasks">
+    <app-task [task]="task"></app-task>
+  </ng-container>
+</ng-template>

@@ -1,0 +1,32 @@
+<!-- app.component.html -->
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="drawer.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Task List Application</span>
+  <span class="spacer"></span>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>settings</mat-icon>
+      <span>Settings</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>logout</mat-icon>
+      <span>Logout</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer mode="side" [(opened)]="opened" [autoFocus]="false">
+    <mat-nav-list>
+      <app-task-list></app-task-list>
+    </mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <!-- Right container content -->
+  </mat-drawer-content>
+</mat-drawer-container>

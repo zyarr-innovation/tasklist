@@ -1,0 +1,28 @@
+<!-- task.component.html -->
+<mat-expansion-panel [expanded]="task.expanded" (opened)="task.expanded = true" (closed)="task.expanded = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{ task.name }}
+      </mat-panel-title>
+      <mat-panel-description>
+        Currently I am {{ task.expanded ? 'open' : 'closed' }}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div>
+      <p>{{ task.description }}</p>
+      <p><strong>State:</strong> {{ task.state }}</p>
+      <p><strong>Start Date:</strong> {{ task.startDate | date }}</p>
+      <p><strong>End Date:</strong> {{ task.endDate | date }}</p>
+      <p><strong>Assigned To:</strong> {{ task.assignedTo }}</p>
+    </div>
+    <div *ngIf="task.subTasks?.length">
+      <ng-container *ngTemplateOutlet="renderTasks; context: { $implicit: task.subTasks }"></ng-container>
+    </div>
+  </mat-expansion-panel>
+  
+  <ng-template #renderTasks let-tasks>
+    <ng-container *ngFor="let task of tasks">
+      <app-task [task]="task"></app-task>
+    </ng-container>
+  </ng-template>
+  

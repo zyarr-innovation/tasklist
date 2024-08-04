@@ -1,0 +1,69 @@
+[
+  {
+    "id": 1,
+    "name": "Project A",
+    "description": "Complete project A",
+    "state": "InProgress",
+    "startDate": "2024-07-01T00:00:00Z",
+    "endDate": "2024-08-01T00:00:00Z",
+    "assignedTo": "Alice",
+    "subTasks": [
+      {
+        "id": 2,
+        "name": "Design",
+        "description": "Design the project layout",
+        "state": "Completed",
+        "startDate": "2024-07-01T00:00:00Z",
+        "endDate": "2024-07-05T00:00:00Z",
+        "assignedTo": "Bob"
+      },
+      {
+        "id": 3,
+        "name": "Implementation",
+        "description": "Implement the design",
+        "state": "InProgress",
+        "startDate": "2024-07-06T00:00:00Z",
+        "endDate": "2024-07-25T00:00:00Z",
+        "assignedTo": "Charlie",
+        "subTasks": [{
+          "id": 6,
+          "name": "Design",
+          "description": "Design the project layout",
+          "state": "Completed",
+          "startDate": "2024-07-01T00:00:00Z",
+          "endDate": "2024-07-05T00:00:00Z",
+          "assignedTo": "Bob"
+        },
+        {
+          "id": 7,
+          "name": "Implementation",
+          "description": "Implement the design",
+          "state": "InProgress",
+          "startDate": "2024-07-06T00:00:00Z",
+          "endDate": "2024-07-25T00:00:00Z",
+          "assignedTo": "Charlie"
+        }]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Project B",
+    "description": "Complete project B",
+    "state": "NotStarted",
+    "startDate": "2024-08-01T00:00:00Z",
+    "endDate": "2024-09-01T00:00:00Z",
+    "assignedTo": "David",
+    "subTasks": [
+      {
+        "id": 5,
+        "name": "Planning",
+        "description": "Plan the project",
+        "state": "NotStarted",
+        "startDate": "2024-08-01T00:00:00Z",
+        "endDate": "2024-08-05T00:00:00Z",
+        "assignedTo": "Eve"
+      }
+    ]
+  }
+]
